@@ -21,12 +21,29 @@ archives:
       386: i386
       amd64: x86_64
 checksum:
-  name_template: 'checksums.txt'
+  name_template: "checksums.txt"
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
   sort: asc
   filters:
     exclude:
-      - '^docs:'
-      - '^test:'
+      - "^docs:"
+      - "^test:"
+brews:
+  - tap:
+      owner: eduardohitek
+      name: homebrew-tap
+    folder: Formula
+    homepage: https://github.com/eduardohitek/uuidg
+    description: Generates an UUID.
+nfpms:
+  - homepage: https://github.com/eduardohitek/uuidg
+    description: Generates an UUID.
+    maintainer: Eduardo Hitek <eduardohitek@gmail.com.com>
+    license: MIT
+    vendor: HTK Solutions
+    formats:
+      - apk
+      - deb
+      - rpm
